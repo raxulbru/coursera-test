@@ -104,9 +104,9 @@ function buildAndShowHomeHTML (categories) {
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
-      var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
+      homeHtml = homeHtmlUrl;
       //var homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlUrl,"randomCategoryShortName",short_name);
-      homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName",short_name);
+      homeHtml = insertProperty(homeHtml,"randomCategoryShortName",short_name);
       //homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName",homeHtmlToInsertIntoMainPage);
       //$ajaxUtils.sendGetRequest(
       //  menuItemsTitleHtml,
@@ -141,7 +141,7 @@ function buildAndShowHomeHTML (categories) {
       // ....
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
-    insertHtml("#main-content",homeHtmlToInsertIntoMainPage);
+    insertHtml("#main-content",homeHtml);
 }
 
 
