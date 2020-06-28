@@ -104,8 +104,9 @@ function buildAndShowHomeHTML (categories) {
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
-      //var homeHtml = homeHtmlUrl;
-      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlUrl,"randomCategoryShortName",short_name);
+      var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
+      //var homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlUrl,"randomCategoryShortName",short_name);
+      homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName",short_name);
       //homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName",homeHtmlToInsertIntoMainPage);
       //$ajaxUtils.sendGetRequest(
       //  menuItemsTitleHtml,
