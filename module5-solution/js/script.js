@@ -99,15 +99,17 @@ function buildAndShowHomeHTML (categories) {
     function (homeHtml) {
       var chosenCategoryShortName = chooseRandomCategory(categories);
       var short_name = chosenCategoryShortName.short_name;
+      console.log(short_name);
       //var homeHtmlToInsertIntoMainPage = chosenCategoryShortName.short_name;
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
-      homeHtml = homeHtmlUrl;
-      //var homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlUrl,"randomCategoryShortName",short_name);
-      homeHtml = insertProperty(homeHtml,"randomCategoryShortName",short_name);
+      //homeHtml = homeHtmlUrl;
+      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlUrl,"randomCategoryShortName",short_name);
+      //homeHtml = insertProperty(homeHtml,"randomCategoryShortName",short_name);
       //homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName",homeHtmlToInsertIntoMainPage);
+      insertHtml("#main-content",homeHtmlToInsertIntoMainPage);
       //$ajaxUtils.sendGetRequest(
       //  menuItemsTitleHtml,
       //  function (menuItemsTitleHtml) {
@@ -141,7 +143,6 @@ function buildAndShowHomeHTML (categories) {
       // ....
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
-    insertHtml("#main-content",homeHtml);
 }
 
 
