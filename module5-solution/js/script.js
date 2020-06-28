@@ -92,24 +92,26 @@ $ajaxUtils.sendGetRequest(
 // Builds HTML for the home page based on categories array
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
-
+  console.log("jsja")
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
       var chosenCategoryShortName = chooseRandomCategory(categories);
       var short_name = chosenCategoryShortName.short_name;
-      console.log(short_name);
+      console.log(chosenCategoryShortName)
+      console.log(chosenCategoryShortName.short_name);
       //var homeHtmlToInsertIntoMainPage = chosenCategoryShortName.short_name;
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
       //homeHtml = homeHtmlUrl;
-      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlUrl,"randomCategoryShortName",short_name);
+      var homeHtmlToInsertIntoMainPage 
+      homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlUrl,"randomCategoryShortName",short_name);
       //homeHtml = insertProperty(homeHtml,"randomCategoryShortName",short_name);
       //homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName",homeHtmlToInsertIntoMainPage);
-      insertHtml("#main-content",homeHtmlToInsertIntoMainPage);
+      insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
       //$ajaxUtils.sendGetRequest(
       //  menuItemsTitleHtml,
       //  function (menuItemsTitleHtml) {
