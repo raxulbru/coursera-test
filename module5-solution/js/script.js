@@ -141,7 +141,7 @@ function buildAndShowHomeHTML (categories) {
       //  "randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
       //homeHtml = insertProperty(homeHtml,"randomCategoryShortName",short_name);
       //homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName",homeHtmlToInsertIntoMainPage);
-      insertHtml("#main-content", homeHtmlUrl);
+      insertHtml("#main-content", homeHtml);
       //document.querySelector("#main-content").innerHTML = homeHtml;
       //$ajaxUtils.sendGetRequest(
       //  menuItemsTitleHtml,
