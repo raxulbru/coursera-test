@@ -120,15 +120,17 @@ function buildAndShowHomeHTML (categories) {
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
       //homeHtml = homeHtmlUrl;
-      var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
-      console.log(homeHtmlToInsertIntoMainPage);
+      //var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
+      //console.log(homeHtmlToInsertIntoMainPage);
       console.log(homeHtmlUrl);
-      homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,
+      //homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
+      //console.log(homeHtmlToInsertIntoMainPage);
+      homeHtml = insertProperty(homeHtmlUrl,
         "randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
-      console.log(homeHtmlToInsertIntoMainPage);
       //homeHtml = insertProperty(homeHtml,"randomCategoryShortName",short_name);
       //homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName",homeHtmlToInsertIntoMainPage);
-      insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
+      //insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
+      document.querySelector("#main-content").innerHTML = homeHtml;
       //$ajaxUtils.sendGetRequest(
       //  menuItemsTitleHtml,
       //  function (menuItemsTitleHtml) {
