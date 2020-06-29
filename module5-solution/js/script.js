@@ -109,13 +109,13 @@ function buildAndShowHomeHTML (categories) {
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
-      //var chosenCategoryShortName = chooseRandomCategory(categories);
-      //console.log("jbja");
-      //var short_name = "'"+chosenCategoryShortName.short_name+"'";
+      var chosenCategoryShortName = chooseRandomCategory(categories);
+      console.log("jbja");
+      var short_name = "'"+chosenCategoryShortName.short_name+"'";
       //console.log("juja");
       //console.log(chosenCategoryShortName);
       //console.log(chosenCategoryShortName.short_name);
-      //console.log(short_name);
+      console.log(short_name);
       //var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
       //console.log("joja");
       //homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
