@@ -116,7 +116,7 @@ function buildAndShowHomeHTML (categories) {
       //console.log(chosenCategoryShortName);
       //console.log(chosenCategoryShortName.short_name);
       console.log(short_name);
-      var homeHtmlToInsertIntoMainPage = function merdeta(short_name);
+      var homeHtmlToInsertIntoMainPage = merdeta(short_name);
       insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
       //homeHtmlUrl;
       //console.log("joja");
