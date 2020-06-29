@@ -116,11 +116,17 @@ function buildAndShowHomeHTML (categories) {
       //console.log(chosenCategoryShortName);
       //console.log(chosenCategoryShortName.short_name);
       console.log(short_name);
-      var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
+      var homeHtmlToInsertIntoMainPage = function (homeHtmlUrl,short_name){
+        var html = homeHtmlUrl;
+        html = insertProperty(html,"randomCategoryShortName",short_name);
+        return html;
+      };
+      insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
+      //homeHtmlUrl;
       //console.log("joja");
       //homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
-      homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName",short_name);
-      console.log(homeHtmlUrl);
+      //homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName",short_name);
+      //console.log(homeHtmlToInsertIntoMainPage);
       //var chosenCategoryShortName = chooseRandomCategory(categories);
       //var short_name = chosenCategoryShortName.short_name;
       //console.log(chosenCategoryShortName)
@@ -141,8 +147,8 @@ function buildAndShowHomeHTML (categories) {
       //  "randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
       //homeHtml = insertProperty(homeHtml,"randomCategoryShortName",short_name);
       //homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName",homeHtmlToInsertIntoMainPage);
-      homeHtml = homeHtmlToInsertIntoMainPage;
-      insertHtml("#main-content", homeHtml);
+      //homeHtml = homeHtmlToInsertIntoMainPage;
+      //insertHtml("#main-content", homeHtml);
       //document.querySelector("#main-content").innerHTML = homeHtml;
       //$ajaxUtils.sendGetRequest(
       //  menuItemsTitleHtml,
