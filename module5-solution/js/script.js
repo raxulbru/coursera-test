@@ -120,7 +120,7 @@ function buildAndShowHomeHTML (categories) {
       //console.log("joja");
       //homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
       homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName",short_name);
-      //console.log(homeHtmlUrl);
+      console.log(homeHtmlUrl);
       //var chosenCategoryShortName = chooseRandomCategory(categories);
       //var short_name = chosenCategoryShortName.short_name;
       //console.log(chosenCategoryShortName)
