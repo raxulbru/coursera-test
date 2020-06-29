@@ -106,13 +106,18 @@ $ajaxUtils.sendGetRequest(
 function buildAndShowHomeHTML (categories) {
   console.log("jsja")
   // Load home snippet page
+  var chosenCategoryShortName = chooseRandomCategory(categories);
+  var short_name = chosenCategoryShortName.short_name;
+  var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
+  homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
+  conlose.log(homeHtmlToInsertIntoMainPage)
   $ajaxUtils.sendGetRequest(
-    homeHtmlUrl,
+    homeHtmlToInsertIntoMainPage,
     function (homeHtml) {
-      var chosenCategoryShortName = chooseRandomCategory(categories);
+      //var chosenCategoryShortName = chooseRandomCategory(categories);
       //var short_name = chosenCategoryShortName.short_name;
-      console.log(chosenCategoryShortName)
-      console.log(chosenCategoryShortName.short_name);
+      //console.log(chosenCategoryShortName)
+      //console.log(chosenCategoryShortName.short_name);
       //console.log(short_name);
       //var homeHtmlToInsertIntoMainPage = chosenCategoryShortName.short_name;
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
@@ -122,11 +127,11 @@ function buildAndShowHomeHTML (categories) {
       //homeHtml = homeHtmlUrl;
       //var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
       //console.log(homeHtmlToInsertIntoMainPage);
-      console.log(homeHtmlUrl);
+      //console.log(homeHtmlUrl);
       //homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
       //console.log(homeHtmlToInsertIntoMainPage);
-      homeHtml = insertProperty(homeHtmlUrl,
-        "randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
+      //homeHtml = insertProperty(homeHtmlUrl,
+      //  "randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
       //homeHtml = insertProperty(homeHtml,"randomCategoryShortName",short_name);
       //homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName",homeHtmlToInsertIntoMainPage);
       //insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
