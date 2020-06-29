@@ -114,7 +114,7 @@ function buildAndShowHomeHTML (categories) {
   console.log(chosenCategoryShortName.short_name);
   var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
   console.log("jija");
-  homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
+  //homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
   console.log(homeHtmlToInsertIntoMainPage);
   $ajaxUtils.sendGetRequest(
     homeHtmlToInsertIntoMainPage,
