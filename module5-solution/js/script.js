@@ -115,11 +115,11 @@ function buildAndShowHomeHTML (categories) {
       console.log("juja");
       console.log(chosenCategoryShortName);
       console.log(chosenCategoryShortName.short_name);
-      //var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
+      var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
       console.log("joja");
       //homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
-      homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName",short_name);
-      console.log(homeHtmlUrl);
+      //homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'"+short_name+"'");
+      //console.log(homeHtmlUrl);
       //var chosenCategoryShortName = chooseRandomCategory(categories);
       //var short_name = chosenCategoryShortName.short_name;
       //console.log(chosenCategoryShortName)
@@ -140,8 +140,8 @@ function buildAndShowHomeHTML (categories) {
       //  "randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
       //homeHtml = insertProperty(homeHtml,"randomCategoryShortName",short_name);
       //homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName",homeHtmlToInsertIntoMainPage);
-      //insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
-      document.querySelector("#main-content").innerHTML = homeHtml;
+      insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
+      //document.querySelector("#main-content").innerHTML = homeHtml;
       //$ajaxUtils.sendGetRequest(
       //  menuItemsTitleHtml,
       //  function (menuItemsTitleHtml) {
