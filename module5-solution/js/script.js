@@ -107,13 +107,17 @@ function buildAndShowHomeHTML (categories) {
   console.log("jsja")
   // Load home snippet page
   var chosenCategoryShortName = chooseRandomCategory(categories);
+  console.log("jbja")
   var short_name = chosenCategoryShortName.short_name;
+  console.log("juja")
   var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
+  console.log("jija")
   homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
-  conlose.log(homeHtmlToInsertIntoMainPage)
+  console.log(homeHtmlToInsertIntoMainPage)
   $ajaxUtils.sendGetRequest(
     homeHtmlToInsertIntoMainPage,
     function (homeHtml) {
+      
       //var chosenCategoryShortName = chooseRandomCategory(categories);
       //var short_name = chosenCategoryShortName.short_name;
       //console.log(chosenCategoryShortName)
