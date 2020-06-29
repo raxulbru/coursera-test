@@ -109,17 +109,17 @@ function buildAndShowHomeHTML (categories) {
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
-      var chosenCategoryShortName = chooseRandomCategory(categories);
-      console.log("jbja");
-      var short_name = "'"+chosenCategoryShortName.short_name+"'";
-      console.log("juja");
-      console.log(chosenCategoryShortName);
-      console.log(chosenCategoryShortName.short_name);
-      console.log(short_name);
-      var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
-      console.log("joja");
+      //var chosenCategoryShortName = chooseRandomCategory(categories);
+      //console.log("jbja");
+      //var short_name = "'"+chosenCategoryShortName.short_name+"'";
+      //console.log("juja");
+      //console.log(chosenCategoryShortName);
+      //console.log(chosenCategoryShortName.short_name);
+      //console.log(short_name);
+      //var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
+      //console.log("joja");
       //homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
-      homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName",short_name);
+      //homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName",short_name);
       //console.log(homeHtmlUrl);
       //var chosenCategoryShortName = chooseRandomCategory(categories);
       //var short_name = chosenCategoryShortName.short_name;
@@ -141,8 +141,8 @@ function buildAndShowHomeHTML (categories) {
       //  "randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
       //homeHtml = insertProperty(homeHtml,"randomCategoryShortName",short_name);
       //homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName",homeHtmlToInsertIntoMainPage);
-      insertHtml("#main-content", homeHtmlUrl);
-      //document.querySelector("#main-content").innerHTML = homeHtml;
+      //insertHtml("#main-content", homeHtmlUrl);
+      document.querySelector("#main-content").innerHTML = homeHtml;
       //$ajaxUtils.sendGetRequest(
       //  menuItemsTitleHtml,
       //  function (menuItemsTitleHtml) {
