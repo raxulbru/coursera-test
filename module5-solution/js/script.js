@@ -106,22 +106,20 @@ $ajaxUtils.sendGetRequest(
 function buildAndShowHomeHTML (categories) {
   console.log("jsja");
   // Load home snippet page
-  var chosenCategoryShortName = chooseRandomCategory(categories);
-  console.log("jbja");
-  var short_name = chosenCategoryShortName.short_name;
-  console.log("juja");
-  console.log(chosenCategoryShortName);
-  console.log(chosenCategoryShortName.short_name);
-  //var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
-  console.log("joja");
-  //homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
-  homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
- 
-  console.log(homeHtmlUrl);
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
-      
+      var chosenCategoryShortName = chooseRandomCategory(categories);
+      console.log("jbja");
+      var short_name = chosenCategoryShortName.short_name;
+      console.log("juja");
+      console.log(chosenCategoryShortName);
+      console.log(chosenCategoryShortName.short_name);
+      //var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
+      console.log("joja");
+      //homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
+      homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName","'" + chosenCategoryShortName.short_name + "'");
+      console.log(homeHtmlUrl);
       //var chosenCategoryShortName = chooseRandomCategory(categories);
       //var short_name = chosenCategoryShortName.short_name;
       //console.log(chosenCategoryShortName)
