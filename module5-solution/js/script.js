@@ -116,11 +116,7 @@ function buildAndShowHomeHTML (categories) {
       //console.log(chosenCategoryShortName);
       //console.log(chosenCategoryShortName.short_name);
       console.log(short_name);
-      var homeHtmlToInsertIntoMainPage = function (homeHtmlUrl,short_name){
-        var html = homeHtmlUrl;
-        html = insertProperty(html,"randomCategoryShortName",short_name);
-        return html;
-      };
+      var homeHtmlToInsertIntoMainPage = function merdeta(short_name);
       insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
       //homeHtmlUrl;
       //console.log("joja");
@@ -185,6 +181,12 @@ function buildAndShowHomeHTML (categories) {
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
 }
 
+
+function merdeta(tarros){
+  var html = homeHtmlUrl;
+  html = insertProperty(html,"randomCategoryShortName",tarros);
+  return html;
+}
 
 // Given array of category objects, returns a random category object.
 function chooseRandomCategory (categories) {
