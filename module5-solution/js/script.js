@@ -101,6 +101,7 @@ function buildAndShowHomeHTML (categories) {
       var short_name = chosenCategoryShortName.short_name;
       console.log(chosenCategoryShortName)
       console.log(chosenCategoryShortName.short_name);
+      console.log(short_name);
       //var homeHtmlToInsertIntoMainPage = chosenCategoryShortName.short_name;
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
@@ -110,7 +111,7 @@ function buildAndShowHomeHTML (categories) {
       var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
       console.log(homeHtmlToInsertIntoMainPage);
       console.log(homeHtmlUrl);
-      homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName",short_name);
+      homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlToInsertIntoMainPage,"randomCategoryShortName",chosenCategoryShortName.short_name);
       console.log(homeHtmlToInsertIntoMainPage);
       //homeHtml = insertProperty(homeHtml,"randomCategoryShortName",short_name);
       //homeHtmlUrl = insertProperty(homeHtmlUrl,"randomCategoryShortName",homeHtmlToInsertIntoMainPage);
